@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>高育仁｜自我介紹</title>
+  <style>
+    :root{
+      --bg: #0b1020; --text:#e6eef8; --muted:#9fb0c7;
+      --card:#0f1730; --line:#1e2a4a; --brand:#22d3ee; --accent:#a78bfa;
+    }
+    :root.light{
+      --bg:#f6f8fb; --text:#0f172a; --muted:#5b6b81;
+      --card:#ffffff; --line:#e5e7eb; --brand:#0ea5e9; --accent:#7c3aed;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:ui-sans-serif, -apple-system, "Segoe UI", Noto Sans TC, Arial, sans-serif;
+      background:var(--bg); color:var(--text);
+      scroll-behavior:smooth;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1080px; margin:0 auto; padding:0 16px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.00));
+      cursor:pointer;
+    }
+    .btn.primary{border-color:transparent; background:linear-gradient(90deg, var(--brand), var(--accent)); color:#04121a; font-weight:700}
+    .chip{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:13px}
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+
+    /* ===== Header ===== */
+    header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(140%) blur(6px)}
+    .nav{
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    }
+    .nav .row{display:flex; align-items:center; justify-content:space-between; gap:12px; height:64px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(90deg, var(--brand), var(--accent))}
+    .nav a{padding:8px 10px; border-radius:8px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+    #themeToggle{margin-left:8px}
+
+    /* ===== Sections ===== */
+    section{padding:72px 0}
+    .hero{padding:96px 0 72px}
+    .hero h1{font-size:clamp(28px, 5vw, 42px); margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .grid{display:grid; gap:16px}
+    @media (min-width: 900px){ .grid.cols-2{grid-template-columns: 1fr 1fr} .grid.cols-3{grid-template-columns: repeat(3,1fr)} }
+
+    /* ===== Lists / Cards ===== */
+    .kpi{display:flex; gap:16px; flex-wrap:wrap}
+    .kpi .card{min-width:160px; text-align:center}
+    .skills{display:flex; gap:8px; flex-wrap:wrap}
+    .projects .card img{width:100%; aspect-ratio: 16/9; object-fit:cover; border-radius:12px; border:1px solid var(--line)}
+    .projects .card h3{margin:10px 0 6px; font-size:18px}
+    .footer{border-top:1px solid var(--line); padding:24px 0; color:var(--muted); text-align:center}
+  </style>
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <div class="container row">
+      <div class="row" style="gap:10px">
+        <span class="brand"><span class="dot"></span> GAO YU REN</span>
+        <span class="muted" style="font-size:14px">NUTC · AI</span>
+      </div>
+      <nav style="display:flex; align-items:center; gap:6px">
+        <a href="#about">關於我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">聯絡</a>
+        <button id="themeToggle" class="btn" title="深/淺色模式">切換主題</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container grid cols-2">
+      <div style="display:grid; gap:14px">
+        <h1>嗨，我是高育仁（GAO YU REN）<br/>正在 NUTC 主修人工智慧。</h1>
+        <p class="muted">
+          我對 <strong>前端開發</strong>、<strong>資料分析</strong> 與 <strong>AI 應用</strong>特別有興趣。
+          目標是在學期間完成多個實作專題，並持續提升英文（TOEIC 600+）。
+        </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap">
+          <a class="btn primary" href="#projects">查看作品集</a>
+          <a class="btn" href="#contact">聯絡我</a>
+        </div>
+        <div class="kpi">
+          <div class="card"><div class="muted">專題 / 作業</div><div style="font-size:22px; font-weight:800">12+</div></div>
+          <div class="card"><div class="muted">主要技能</div><div style="font-size:22px; font-weight:800">JS · Python</div></div>
+          <div class="card"><div class="muted">目標</div><div style="font-size:22px; font-weight:800">全端實作</div></div>
+        </div>
+      </div>
+      <div class="card" style="display:grid; place-items:center; min-height:260px">
+        <!-- 可換成你的個人照 -->
+        <svg viewBox="0 0 200 200" width="80%" fill="none" stroke="url(#g)" stroke-width="2">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
+          <circle cx="100" cy="100" r="70"/><path d="M30 130 Q100 170 170 130"/>
+        </svg>
+        <div class="muted" style="margin-top:8px; font-size:13px">（把這裡換成你的頭像圖片）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2 style="margin:0 0 8px">關於我</h2>
+        <p class="muted">
+          目前就讀 <strong>台中科技大學（NUTC）人工智慧系</strong>。喜歡把課堂所學做成小專案，
+          像是爬蟲、資料視覺化、以及簡單的前端互動網站。希望未來往
+          <strong>前端工程 / 資料工程</strong> 發展。
+        </p>
+        <ul>
+          <li>擅長：HTML/CSS、JavaScript、Python（Pandas/Matplotlib）</li>
+          <li>正在學：Vue、SQL/MySQL、系統整合（XAMPP）</li>
+          <li>興趣：電競、運動、效率工具、教學分享</li>
+        </ul>
+        <div style="margin-top:8px"><a class="btn" href="#" onclick="alert('可改成下載你的履歷 PDF 的連結')">下載履歷 PDF</a></div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">時間線</h3>
+        <ol>
+          <li><strong>2025</strong>：完成多個課程專案（AI互動、爬蟲、前端）</li>
+          <li><strong>2024</strong>：開始系統學習程式與資料分析</li>
+          <li><strong>未來</strong>：累積實習與接案作品，挑戰全端小型專案</li>
+        </ol>
+        <div class="muted" style="font-size:13px">（把年份與內容改成你的真實里程碑）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills">
+    <div class="container">
+      <h2 style="margin:0 0 12px">技能</h2>
+      <div class="card">
+        <div class="skills">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3 / RWD</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Vue（基礎）</span>
+          <span class="chip">Python / Pandas</span>
+          <span class="chip">Matplotlib</span>
+          <span class="chip">MySQL（基礎）</span>
+          <span class="chip">Git & GitHub</span>
+          <span class="chip">Figma（基礎）</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 style="margin:0 0 12px">作品 / 專題</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <img src="https://picsum.photos/seed/app1/960/540" alt="專題封面">
+          <h3>智慧車票 UI（課堂作業）</h3>
+          <p class="muted">聚焦「簡潔介面」與「搭乘時間」，以原生 JS 製作互動原型。</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap">
+            <span class="chip">HTML/CSS</span><span class="chip">JS</span><span class="chip">UX</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/app2/960/540" alt="專題封面">
+          <h3>NBA 商城爬蟲</h3>
+          <p class="muted">Selenium 擷取頁面，Pandas 清理資料，輸出 CSV 供視覺化。</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap">
+            <span class="chip">Python</span><span class="chip">Selenium</span><span class="chip">Pandas</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/app3/960/540" alt="專題封面">
+          <h3>薪資視覺化儀表板</h3>
+          <p class="muted">以 Matplotlib 呈現不同職位/年資之薪資分佈。</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap">
+            <span class="chip">Python</span><span class="chip">Matplotlib</span><span class="chip">EDA</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2 style="margin:0 0 8px">聯絡我</h2>
+        <p class="muted">想合作或交流，歡迎來信與我聊聊！</p>
+        <p><strong>Email：</strong><a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <p><strong>GitHub：</strong><a href="#" onclick="alert('把連結換成你的 GitHub 連結')">github.com/yourname</a></p>
+        <p><strong>LinkedIn：</strong><a href="#" onclick="alert('把連結換成你的 LinkedIn 連結')">linkedin.com/in/yourname</a></p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">訊息表單（範例）</h3>
+        <form onsubmit="event.preventDefault(); alert('已送出（示範）。實際可改用表單服務/後端');">
+          <div style="display:grid; gap:10px">
+            <input required placeholder="你的名字" style="padding:10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--text)">
+            <input required type="email" placeholder="你的 Email" style="padding:10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--text)">
+            <textarea required placeholder="訊息內容" rows="4" style="padding:10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--text)"></textarea>
+            <button class="btn primary" type="submit">送出</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Gao Yu Ren. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // ===== 深/淺色主題切換（記憶在 localStorage） =====
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme') || 'dark';
+    if(saved === 'light'){ root.classList.add('light'); }
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
